@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./CSS/style.css" />
+  <title>Шифр Виженера</title>
+</head>
+
+<body>
+
+  <div id="blob"></div>
+  <h1>Шифр Виженера</h1>
+  <section>
+
+    <div class="container-info">
+      <img class="img-gif" src="./CSS/asets/main-Test-art.gif" />
+      <div class="info1">
+        <div class="text-block">
+          <h2>Шифр Виженера</h2>
+          <p>
+            Метод полиалфавитного шифроавания буквенного текста с использованием ключевого слова. Этот метод является
+            простой форма многоалфавитной замены.
+          </p>
+        </div>
+      </div>
+      <div class="info2">
+        <div class="text-block">
+          <h2>Принцип работы</h2>
+          <p>
+            В качестве ключа выступает специальная фраза. Она несколько раз
+            повторяется и пишется над шифруемым текстом. В результате каждая
+            буква посылаемого сообщения сдвигается относительно заданного текста
+            на определенное число, которое задается буквой ключевой фразы. На
+            протяжении нескольких веков данный метод устойчиво занимал позицию
+            самого надежного метода шифрования.
+          </p>
+        </div>
+      </div>
+      <div class="info3">
+        <div class="text-block">
+          <h2>Принцип работы программы</h2>
+          <p>
+            Данная программа шифрует помимо букв и специальные символы, включая пробелы для сохранения целостности
+            информации. Кроме того для упрощения работы с текстом в программе есть функция чтения файлов .txt
+            расширения. Данная программа работает с раскладкой ACLL, что означает её не поддержку русского языка на
+            данный момент. Кроме того программа может дешифрировать сообщения при знании правильного ключа.
+          </p>
+        </div>
+      </div>
+  </section>
+
+  <section>
+
+    <div class="funct">
+      <div class="file">
+        <div class="file-input"> 
+          <label>
+            <p class="btnFile">Загрузить файл</p>
+            <input type="file" style="display: none;" id="fileInput" />
+          </label>
+          <p type="button" id="submitBtn" class="btnFile">Прочитать</p>
+        </div>
+        <p id="fileContents">Тут должно быть содержимое текстовго файла</p>
+      </div>
+
+        <div class="encrypt">
+          <p for="message">Введите сообщение:</p>
+          <input type="text" id="message" />
+          <p for="key">Введите ключ:</p>
+          <input type="text" id="key" />
+          <button id="encryptButton">Зашифровать</button>
+          <p id="output"></p>
+        </div>
+
+        <div class="decrypt">
+          <p>Введите зашифрованное сообщение:</p>
+          <input type="text" id="messageInput2" />
+          <p for="keyInput">Введите ключ:</p>
+          <input type="text" id="keyInput" />
+          <button id="decryptButton">Расшифровать</button>
+          <p id="outputMessage"></p>
+        </div>
+      
+
+    </div>
+  </section>
+
+  <script async src="./script.js"></script>
+</body>
+
+</html>
